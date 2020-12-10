@@ -7,15 +7,30 @@ def readFile(fileName):
     words = fileObj.read().splitlines()  # puts the file into an array
     fileObj.close()
     return words
-def findSum(words):
+
+def part1(words):
     number = 1
     for w in words:
         num = 2020 - int(w)
         if str(num) in words:
             number = num * number
-            print(num)
+            # print(num)
     return number
 
+# Using the above example again, the three entries that sum to 2020 are 979, 366, and 675.
+# Multiplying them together produces the answer, 241861950.
+
+def part2(words):
+
+    for wor in words:
+        for w in words:
+            accum = 2020 - int(wor) - int(w)
+            if str(accum) in words:
+                print(accum)
+                return accum * int(wor) * int(w)
+
 if __name__ == '__main__':
-    print("Hola")
-    print(findSum(readFile("input.txt")))
+    # print("Exercise 1, part one")
+    # print(part1(readFile("input.txt")))
+    print("Exercise 1, part two")
+    print(part2(readFile("input.txt")))
