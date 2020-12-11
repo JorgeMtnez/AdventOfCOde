@@ -30,7 +30,7 @@ def part2(words):
                 return accum * int(wor) * int(w)
 
 if __name__ == '__main__':
-    # print("Exercise 1, part one")
-    # print(part1(readFile("input.txt")))
+    print("Exercise 1, part one")
+    print(part1(readFile("input.txt")))
     print("Exercise 1, part two")
     print(part2(readFile("input.txt")))
