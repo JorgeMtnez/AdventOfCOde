@@ -17,10 +17,10 @@ def part1(input) -> int:
         if line[actualPosition] == '#':
             tree += 1
             print("hello")
-        if (actualPosition + 3) <= len(line):
+        if (actualPosition + 3) < len(line):
             actualPosition += 3
         elif (actualPosition + 3) >= len(line):
-            actualPosition += 3 - len(line)
+            actualPosition = actualPosition + 3 - len(line)
     return tree
 
 if __name__ == '__main__':
